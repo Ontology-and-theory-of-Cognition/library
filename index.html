@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Электронный архив публикаций сотрудников кафедры онтологии и теории познания</title>
+    <link rel="stylesheet" href="visual.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-institution">Уральский федеральный университет</div>
+            <h1>Электронный архив публикаций</h1>
+            <p class="header-dept">Кафедра онтологии и теории познания</p>
+        </header>
+
+        <div class="stats">
+            <div class="stats-card">
+                <span class="stats-icon">👥</span>
+                <div class="stats-info">
+                    <span class="stats-label">Авторов</span>
+                    <strong class="stats-number" id="totalCount">0</strong>
+                </div>
+            </div>
+            <div class="stats-card">
+                <span class="stats-icon">📄</span>
+                <div class="stats-info">
+                    <span class="stats-label">Всего работ</span>
+                    <strong class="stats-number" id="totalWorks">0</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-bar">
+                <div class="search-input-wrap">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск по имени автора...">
+                </div>
+                <select id="sortSelect" class="sort-select">
+                    <option value="name-asc">А → Я</option>
+                    <option value="name-desc">Я → А</option>
+                    <option value="works-desc">Больше работ</option>
+                    <option value="works-asc">Меньше работ</option>
+                </select>
+            </div>
+            <div class="results-info" id="resultsInfo"></div>
+        </div>
+
+        <div class="authors-grid" id="authorsGrid"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
